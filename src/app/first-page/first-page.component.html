@@ -1,0 +1,43 @@
+<div style="text-align:center">
+      
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+
+  <h2> {{message}} </h2>
+  
+  <img width="300" alt="Angular Doggo" src="../assets/doggo.jpg"><hr>
+
+  <button class="btn btn-primary" (click) = "showMessage()">Get Message</button>
+  <button class="btn btn-primary" (click) = "changePage()">Access secured page</button>
+
+  <button (click)="getUsers()"> Show Database Users </button>
+
+  <br><hr>
+
+
+  <input
+  type="file" #fileInput
+  ng2FileSelect
+  [uploader]="uploader"
+  (onFileSelected)="onFileSelected($event)" 
+  multiple/>
+
+
+ <div *ngFor="let item of uploader.queue">
+   <span> {{ item.file.name }} </span>
+   <button (click)="item.upload()">Upload file</button>
+ </div>
+
+  <button (click)="getSavedFiles()">Get server files</button>
+  <a href="http://localhost:3000/file/security-doggo.jpg" download>Link</a>
+ <hr>
+
+
+
+
+
+
+ 
+
+</div>

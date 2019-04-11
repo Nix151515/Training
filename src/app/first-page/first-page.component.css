@@ -1,0 +1,6 @@
+#fileDrop {
+    border: dotted 3px lightgray;
+    min-height: 100px;
+    width: 50%;
+    float: left;
+}

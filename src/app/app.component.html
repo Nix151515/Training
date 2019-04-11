@@ -1,0 +1,12 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<ul>
+    <li><a [routerLink]="['']">Home</a></li>
+    <li><a [routerLink]="['register']">Register</a></li>
+    <li><a *ngIf="!token" [routerLink]="['login']">Login</a></li>
+    <li><a *ngIf="token" [routerLink]="['login']" (click)="logout()">Logout</a></li>
+
+    <li><a *ngIf="!token" [routerLink]="['facebook']">Social Login</a></li>
+    <li><a [routerLink]="['page2']">Secured</a></li>
+</ul>
+<router-outlet></router-outlet>
